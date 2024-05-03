@@ -48,7 +48,6 @@ To scale the containers vertically (to say `200MB` of memory, `200MB` of swap me
 
 To manually test the service, run the following command
 ```bash
-# ./orchestrator.sh test --num-request=1000
 ab -n 1000 -c 10 http://localhost:8080/
 ```
 

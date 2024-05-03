@@ -3,7 +3,7 @@ clear
 
 # ---------------- PARAMS ----------------
 
-INIT_NODES=10     # Number of initial nodes (upto ~150 for 8GB RAM VM)
+INIT_NODES=5     # Number of initial nodes (upto ~150 for 8GB RAM VM)
 STRATEGY="random" # random | round-robin | least-connections | ip-hash
 
 BUILD_IMG=true
@@ -160,6 +160,7 @@ run() {
 
 case "$1" in
 "run")
+  cleanup_all
   run
   ;;
 "reset")

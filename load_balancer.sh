@@ -8,6 +8,7 @@ create_nginx_conf() {
   NG+="events { worker_connections 1024; }\n"
   NG+="http {\n"
   NG+="\tupstream all {\n"
+  NG+="\t\tleast_conn;\n" # you can also try `ip_hash`, other methods are in NGINX Plus
   for i in $N_list; do
     NG+="\t\tserver $i:8080;\n"
   done
