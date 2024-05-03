@@ -176,9 +176,6 @@ case "$1" in
 "scale")
   python3 scale.py "${@:2}"
   ;;
-"test")
-  python3 load_test.py http://localhost:8080 "${@:2}"
-  ;;
 *)
   echo "Usage: $0 {run|add|reset} [arguments...]"
   exit 1
